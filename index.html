@@ -12,17 +12,18 @@
    <!-- Mobile Specific Metas
    ================================================== -->
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<!-- CSS
     ================================================== -->
    <link rel="stylesheet" href="css/default.css">
 	<link rel="stylesheet" href="css/layout.css">
    <link rel="stylesheet" href="css/media-queries.css">
    <link rel="stylesheet" href="css/magnific-popup.css">
-
+   <link rel="stylesheet" href="css/profiledisplay.css"> 
    <!-- Script
    ================================================== -->
 	<script src="js/modernizr.js"></script>
+   <script src="js/profiledisplay.js"></script>
 
    <!-- Favicons
 	================================================== -->
@@ -77,14 +78,21 @@
 
    <!-- About Section
    ================================================== -->
+
    <section id="about">
 
       <div class="row">
 
          <div class="three columns">
 
-            <img class="profile-pic"  src="images/myprofile.jpg" alt="" />
-
+            <img id="myImg" class="profile-pic"  src="images/myprofile.jpg" alt="" />
+            
+            <!-- The Modal -->
+            <div id="myModal" class="modal">
+              <span class="close">&times;</span>
+              <img class="modal-content" id="img01">
+              <div id="caption"></div>
+            </div>
          </div>
 
          <div class="nine columns main-col">
@@ -260,7 +268,7 @@
 
          <div class="twelve columns collapsed">
 
-            <h1>Check Out Some of My Works.</h1>
+            <h1>Check Out Some of My Dream</h1>
 
             <!-- portfolio-wrapper -->
             <div id="portfolio-wrapper" class="bgrid-quarters s-bgrid-thirds cf">
